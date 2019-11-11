@@ -1,0 +1,62 @@
+<div class="headCard">
+  <div class="headerContent">
+    <div class="place">
+      <h2>{{ cityName }}</h2>
+      <p class="temperature">{{ forecast[0].temp }}°C</p>
+    </div>
+    <div class="currentWeather">
+      <img src="{{ forecast[0].icon }}" />
+    </div>
+    <div class="wind">
+      <img
+        src="assets/img/fleche.png"
+        [style.transform]="
+          'rotate(' +
+          (forecast[0].windOrientation ? forecast[0].windOrientation : 0) +
+          'deg)'
+        "
+      />
+    </div>
+  </div>
+  <div class="textHeader">
+    <p class="humidity">Humidité : {{ forecast[0].humidity }}%</p>
+    <p>{{ forecast[0].description }}</p>
+    <p>{{ forecast[0].windSpeed }} km/h</p>
+
+  </div>
+  <div class="textHeader">    
+    <p>Lever soleil  : {{sunrise | date: "H:mm"}}</p>
+    <p>Coucher soleil :  {{sunset | date: "H:mm"}}</p>
+  </div>
+  <table>
+    <tr
+      *ngFor="let item of forecast; index as i; odd as isOdd; even as isEven"
+      [class.odd]="isOdd"
+      [class.even]="isEven"
+    >
+      <td>
+        <p style="margin-right: 10px;">{{ item.timestamp | date: "H" }} h</p>
+      </td>
+      <td>
+        <p>{{ item.temp }}°C</p>
+      </td>
+      <td>
+        <p>{{ item.description }}</p>
+      </td>
+      <td class="tableWind">
+        <p>{{ item.windSpeed }}km/h</p>
+        <img
+          src="assets/img/fleche.png"
+          [style.transform]="
+            'rotate(' +
+            (item.windOrientation ? item.windOrientation : 0) +
+            'deg)'
+          "
+        />
+      </td>
+      <td class="tableIcon">
+        <img src="{{ item.icon }}" />
+      </td>
+    </tr>
+  </table>
+</div>

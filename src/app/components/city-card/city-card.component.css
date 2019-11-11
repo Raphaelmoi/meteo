@@ -1,0 +1,90 @@
+.headCard{
+    border-bottom: 1px gray solid;
+}
+.headerContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.headerContent h2{
+    margin: 0;
+}
+.textHeader{
+    display: flex;
+    justify-content: space-around;
+}
+.textHeader p{
+    margin: 0;
+}
+.temperature {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 10px;
+}
+.currentWeather{
+    text-align: center;
+}
+.place{
+    height: 100%;
+}
+.humidity{
+    margin-bottom: 0;
+}
+.currentWeather p{
+    text-transform: capitalize;
+    margin-top: -10px;
+}
+.wind{
+    text-align: center;
+    margin-right: 8px;
+    /* align-self: flex-end; */
+}
+.wind img {
+    width: 30px;
+    height: 30px;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0ch;
+    border: 5px transparent solid;
+}
+tr{
+    height: 50px;
+}
+tr:first-child {
+}
+.odd{
+    background-color: rgb(161, 219, 154);
+    text-align: center;
+    height: 50px;
+}
+.even{
+    background-color: rgb(116, 182, 107);
+    text-align: center;
+    height: 50px;
+}
+table img{
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+}
+.tableWind{
+    display: flex;
+    height: 55px;
+    align-items: center;
+}
+table p{
+    margin: 5;
+}
+.tableWind p{
+    margin: 0;
+}
+.tableIcon img{
+    width: 50px;
+    height: 50px;
+}
+
+

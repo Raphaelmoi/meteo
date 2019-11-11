@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+.mainBody{
+    display: flex;
+}
+app-city-card{
+    flex: 1;
+    background-color: #b2dfdb;
+    margin: 20px;
+    border: 2px #26a69a solid;
+    border-radius: 5px;
+}
